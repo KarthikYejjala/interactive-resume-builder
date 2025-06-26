@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Fill Your Details</h2>
+      <form id="resume-form">
+        <label>Name: <input type="text" id="name" /></label>
+        <label>Email: <input type="email" id="email" /></label>
+        <label>Phone: <input type="text" id="phone" /></label>
+        <label>Profile Summary:
+          <textarea id="summary" rows="3"></textarea>
+        </label>
+
+        <h3>Education</h3>
+        <div id="education-section"></div>
+        <button type="button" onclick="addEducation()">+ Add Education</button>
+
+        <h3>Experience</h3>
+        <div id="experience-section"></div>
+        <button type="button" onclick="addExperience()">+ Add Experience</button>
+
+        <h3>Skills</h3>
+        <input type="text" id="skills" placeholder="e.g., HTML, CSS, JS" />
+
+        <br/><br/>
+        <button type="reset" onclick="clearPreview()">Clear</button>
+      </form>
+    </div>
+
+    <div class="preview-section">
+      <h2>Live Resume Preview</h2>
+      <div id="resume-preview">
+        <!-- Live preview will appear here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
